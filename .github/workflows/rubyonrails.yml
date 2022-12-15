@@ -23,9 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa
         with:
-          ruby-version: 3.1.2
+          bundler-cache: true
       - name: Build and run test
         env:
           DATABASE_URL: postgres://postgres:@localhost:5432/test
